@@ -7,6 +7,7 @@ import classNames from "classnames";
 import { baseURL, meta, fonts, effects, style, dataStyle } from "@/resources/once-ui.config";
 import { Meta, Schema,  Column, Flex, opacity, SpacingToken, Background} from "@once-ui-system/core";
 import { Providers } from '@/components/Providers';
+import { Header2 } from '@/components/Header2';
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -149,7 +150,12 @@ export default function RootLayout({
               color: effects.lines.color,
             }}
           />
-          {children}
+          <Column style={{ position: "sticky", top: 0, zIndex: 100 }} fillWidth>
+            <Header2 />
+          </Column>
+          <Column>
+            {children}
+          </Column>
         </Column>
       </Providers>
     </Flex>
