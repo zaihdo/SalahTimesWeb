@@ -5,13 +5,12 @@ import { Column, Text, Heading } from "@once-ui-system/core";
 export default function PrivacyPolicy() {
   return (
     <Column fillWidth center padding="l" style={{ minHeight: "100vh" }}>
-      <Heading size="xl" margin="l">
+      <Heading size="xl" margin="m">
         Privacy Policy
       </Heading>
       <Column maxWidth="m">
       <Text size="l" margin="l">
           <Text>This privacy policy applies to the SalaahTimesBotswana prayer times app, which is a fully offline application that does not collect, store, or process any user data.</Text>
-          <br />
           <br />
           <br />
           <Text variant="label-strong-l">Data Collection</Text>

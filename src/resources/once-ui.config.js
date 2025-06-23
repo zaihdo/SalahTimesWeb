@@ -41,7 +41,7 @@ const style = {
   theme: "system", // dark | light | system
   neutral: "gray", // sand | gray | slate
   brand: "blue", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  accent: "indigo", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  accent: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   solid: "contrast", // color | contrast | inverse
   solidStyle: "flat", // flat | plastic
   border: "playful", // rounded | playful | conservative
@@ -109,9 +109,9 @@ const effects = {
 const meta = {
   home: {
     path: "/",
-    title: "Once UI for Next.js",
+    title: "Salaah Times in Botswana",
     description:
-      "An open-source design system and component library for Next.js that emphasizes easy styling and accessibility in UI development.",
+      "Get your daily prayer and jama'ah times for anywhere in Botswana.",
     image: "/images/og/home.jpg",
     canonical: "https://once-ui.com",
     robots: "index,follow",
@@ -124,15 +124,15 @@ const meta = {
 const schema = {
   logo: "",
   type: "Organization",
-  name: "Once UI",
+  name: "SalaahTimesBotswana",
   description: meta.home.description,
-  email: "lorant@once-ui.com",
+  email: "zaidhimran2000@gmail.com",
 };
 
 // social links
 const social = {
   twitter: "https://www.twitter.com/_onceui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
+  linkedin: "https://www.linkedin.com/in/zaidhimran/",
   discord: "https://discord.com/invite/5EyAQ4eNdS",
 };
 
