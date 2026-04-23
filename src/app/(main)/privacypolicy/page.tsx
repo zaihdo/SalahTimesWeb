@@ -1,66 +1,69 @@
-// src/app/(main)/privacypolicy/page.tsx
+"use client";
 
-import { Column, Text, Heading } from "@once-ui-system/core";
+import Link from "next/link";
+
+const policySections = [
+  {
+    title: "Data Collection",
+    body: "Salaah Times Botswana is an offline-first app and does not collect personal data from users.",
+  },
+  {
+    title: "Data Storage",
+    body: "We do not store personal user data on remote servers or in-app profiles because no account or cloud storage is required.",
+  },
+  {
+    title: "Data Processing",
+    body: "Prayer time functionality is based on pre-loaded and local app logic. We do not process personal user information to provide core features.",
+  },
+  {
+    title: "User Data Protection",
+    body: "Because no personal user data is collected or retained, there is no personal dataset used for profiling, selling, or third-party tracking.",
+  },
+  {
+    title: "Policy Updates",
+    body: "This policy may be updated to reflect product changes. Any updates will appear on this page with a revised effective date.",
+  },
+  {
+    title: "Acknowledgement",
+    body: "By using the app, you acknowledge you have read and understood this privacy policy.",
+  },
+];
 
 export default function PrivacyPolicy() {
   return (
-    <Column fillWidth center padding="l" style={{ minHeight: "100vh" }}>
-      <Heading size="xl" margin="m">
-        Privacy Policy
-      </Heading>
-      <Column maxWidth="m">
-      <Text size="l" margin="l">
-          <Text>This privacy policy applies to the SalaahTimesBotswana prayer times app, which is a fully offline application that does not collect, store, or process any user data.</Text>
-          <br />
-          <br />
-          <Text variant="label-strong-l">Data Collection</Text>
-          <br />
-          <br />
-          <Text>Data Collection: We do not collect any personal data or information from our users. Our app is designed to function entirely offline, and we do not request or require any user input or data to operate.</Text>
-          <br />
-          <br />
-          <Text variant="label-strong-l">Data Storage</Text>
-          <br />
-          <br />
-          <Text>We do not store any user data or information on our servers or in our app. Our app is a self-contained, offline application that does not have the ability to store or retain any user data.</Text>
-          <br />
-          <br />
-          <Text variant="label-strong-l">Data Processing</Text>
-          <br />
-          <br />
-          <Text>We do not process any user data or information. Our app is designed to provide prayer times and other relevant information based on pre-loaded data, and we do not use any user data or input to generate this information.</Text>
-          <br />
-          <br />
-          <Text variant="label-strong-l">User Data Protection</Text>
-          <br />
-          <br />
-          <Text>Since we do not collect, store, or process any user data, we do not have any user data to protect. Our app is designed to be a secure and private way for users to access prayer times and other relevant information.</Text>
-          <br />
-          <br />
-          <Text variant="label-strong-l">Changes to this Policy</Text>
-          <br />
-          <br />
-          <Text>We may update this privacy policy from time to time to reflect changes in our app or our practices. However, since we do not collect, store, or process any user data, we do not anticipate making any significant changes to this policy.</Text>
-          <br />
-          <br />
-          <Text variant="label-strong-l">Contact Us</Text>
-          <br />
-          <br />
-          <Text>If you have any questions or concerns about this privacy policy, please contact us at [zaidhimran2000@gmail.com].</Text>
-          <br />
-          <br />
-          <Text variant="label-strong-l">Acknowledgement</Text>
-          <br />
-          <br />
-          <Text>By using our app, you acknowledge that you have read and understood this privacy policy, and you agree to our practices regarding the collection, storage, and processing of user data.</Text>
-          <br />
-          <br />
-          <Text variant="label-strong-l">Effective Date</Text>
-          <br />
-          <br />
-          <Text> This privacy policy is effective as of 22 June 2025 and may be updated from time to time.</Text>
-        </Text>
-        </Column>
-    </Column>
+    <div className="app-shell privacy-shell">
+      <section className="privacy-hero">
+        <div className="privacy-hero-bg" />
+        <p className="pill">Privacy Policy</p>
+        <h1>Your prayer routine stays private.</h1>
+        <p className="lead">
+          Salaah Times Botswana is designed as an offline-first experience with minimal data handling.
+        </p>
+      </section>
+
+      <section className="content-wrap">
+        <div className="privacy-card">
+          {policySections.map((section) => (
+            <article key={section.title} className="privacy-section">
+              <h2>{section.title}</h2>
+              <p>{section.body}</p>
+            </article>
+          ))}
+
+          <article className="privacy-section privacy-contact">
+            <h2>Contact Us</h2>
+            <p>
+              For any privacy questions, email{" "}
+              <a href="mailto:zaidhimran2000@gmail.com">zaidhimran2000@gmail.com</a>.
+            </p>
+          </article>
+
+          <div className="privacy-footer-row">
+            <span>Effective date: 22 June 2025</span>
+            <Link href="/" className="text-link">Back to home</Link>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
