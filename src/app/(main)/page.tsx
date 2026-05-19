@@ -6,7 +6,7 @@ function StoreCTAs() {
   return (
     <div className="store-cta-row">
       <a
-        href="https://apps.apple.com"
+        href="https://apps.apple.com/ca/app/salah-times-botswana/id6758271144"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Download on the App Store"
@@ -22,10 +22,10 @@ function StoreCTAs() {
         <span>App Store</span>
       </a>
       <a
-        href="https://play.google.com/store/apps"
+        href="https://forms.gle/WF4w7HE8MJ76jVzU9"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Get it on Google Play"
+        aria-label="Google Play beta testing signup"
         className="store-cta-button google-play"
       >
         <img
@@ -35,7 +35,7 @@ function StoreCTAs() {
           width={40}
           height={40}
         />
-        <span>Google Play</span>
+        <span>Google Play (Beta testing)</span>
       </a>
     </div>
   );
@@ -48,11 +48,11 @@ export default function Home() {
         <div className="hero-overlay" />
         <div className="hero-inner">
           <p className="pill">Salaah Times Botswana</p>
-          <h1>Enhance your prayer journey.</h1>
+          <h1 className="hero-title">Enhance your prayer journey.</h1>
           <p className="lead">
             Select your city, and pray on time with Ja'maah
           </p>
-          <h2>Download the app now</h2>
+          <h2 className="hero-download-cta">Download the app now</h2>
           <StoreCTAs />
         </div>
       </section>
